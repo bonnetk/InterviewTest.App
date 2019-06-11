@@ -1,0 +1,30 @@
+﻿<Window x:Class="InterviewTest.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Items="clr-namespace:InterviewTest.App.Items"
+        mc:Ignorable="d"
+        Title="Food Inc - List sharing" Height="350" Width="525" Icon="Resources/1499284707_fruit_grapes.png" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <!-- 
+            I didn't solved the UI resizing issue because I have no clue how to make it behave in a responsive way 
+            I know there are components to make the UI elements "float" but I don't have the time to try it
+        -->
+
+        <!-- Add the UserControl for the left part of the window -->
+        <Items:ItemListView />
+
+        <!-- Add the UserControl for the right part of the window -->
+        <Items:AddItemView Grid.Column="1"/>
+
+    </Grid>
+</Window>
